@@ -1,0 +1,168 @@
+﻿@{
+    ViewData["Title"] = "DevOps Deployment Dashboard";
+}
+
+<div class="container mt-4">
+
+    <div class="text-center mb-5">
+
+        <h1 class="display-4 text-primary">
+            🚀 DevOps Deployment Dashboard
+        </h1>
+
+        <p class="lead">
+            End-to-End CI/CD using ASP.NET Core MVC, Docker, Amazon ECR, GitHub Actions and Terraform
+        </p>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-3 mb-4">
+            <div class="card border-success shadow h-100">
+                <div class="card-body text-center">
+                    <h5>Application</h5>
+                    <h2>✅</h2>
+                    <strong>Running</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card border-primary shadow h-100">
+                <div class="card-body text-center">
+                    <h5>Framework</h5>
+                    <h2>⚙️</h2>
+                    <strong>@ViewBag.Framework</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card border-warning shadow h-100">
+                <div class="card-body text-center">
+                    <h5>Container</h5>
+                    <h2>🐳</h2>
+                    <strong>Docker</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card border-info shadow h-100">
+                <div class="card-body text-center">
+                    <h5>Cloud</h5>
+                    <h2>☁️</h2>
+                    <strong>AWS</strong>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <div class="card shadow mb-4">
+
+                <div class="card-header bg-primary text-white">
+
+                    Deployment Details
+
+                </div>
+
+                <table class="table table-striped mb-0">
+
+                    <tr>
+                        <th>Deployment Status</th>
+                        <td class="text-success fw-bold">SUCCESS ✅</td>
+                    </tr>
+
+                    <tr>
+                        <th>Environment</th>
+                        <td>@ViewBag.Environment</td>
+                    </tr>
+
+                    <tr>
+                        <th>Current Time</th>
+                        <td>@ViewBag.CurrentTime</td>
+                    </tr>
+
+                    <tr>
+                        <th>Version</th>
+                        <td>1.0.0</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+
+            <div class="card shadow mb-4">
+
+                <div class="card-header bg-success text-white">
+
+                    Server Information
+
+                </div>
+
+                <table class="table table-striped mb-0">
+
+                    <tr>
+                        <th>Machine Name</th>
+                        <td>@ViewBag.Machine</td>
+                    </tr>
+
+                    <tr>
+                        <th>Operating System</th>
+                        <td>@ViewBag.OS</td>
+                    </tr>
+
+                    <tr>
+                        <th>Container Registry</th>
+                        <td>Amazon ECR</td>
+                    </tr>
+
+                    <tr>
+                        <th>CI/CD</th>
+                        <td>GitHub Actions</td>
+                    </tr>
+
+                    <tr>
+                        <th>Infrastructure</th>
+                        <td>Terraform</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="alert alert-success text-center">
+
+        <h4>
+            🎉 Application Successfully Running
+        </h4>
+
+        <p>
+
+            This application is designed to demonstrate a complete DevOps workflow:
+
+        </p>
+
+        <strong>
+
+            GitHub → GitHub Actions → Docker → Amazon ECR → AWS Deployment
+
+        </strong>
+
+    </div>
+
+</div>
