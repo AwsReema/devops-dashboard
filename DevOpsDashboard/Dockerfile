@@ -3,12 +3,12 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build  
 
 
-# creates a working folder under the container
+# Sets the working directory inside the container
 WORKDIR /src 
-# copies entire code 
+# copies entire code into the container.
 COPY . .
 
-# downloads all nuget packages
+# Restores all project dependencies.
 
 RUN dotnet restore "DevOpsDashboard.csproj" 
 
