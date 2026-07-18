@@ -6,10 +6,12 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 # creates a working folder under the container
 WORKDIR /src 
 # copies entire code 
-COPY . . 
+COPY . .
+
+# downloads all nuget packages
 
 RUN dotnet restore "DevOpsDashboard.csproj" 
-# downloads all nuget packages
+
 
 # creates op for deplyment (generates files application  requirs for production
 
